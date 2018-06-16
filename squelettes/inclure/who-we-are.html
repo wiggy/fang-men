@@ -1,0 +1,31 @@
+<div class="container">
+    <BOUCLE_who(ARTICLES) {id_article IN 1,2} {lang}>
+        <div class="title-box">
+          <h1 class="title">[(#TITRE|textebrut)]</h1>
+        </div>
+  
+        <div class="row">
+          <div class="col-sm-6 col-md-6 bottom-padding">
+            <p class="lead">[(#TEXTE)]</p>
+          </div>
+          
+          <div class="col-sm-6 col-md-6 bottom-padding">
+            
+            <div class="progress border-radius" data-appear-progress-animation="80%">
+              <div class="progress-bar progress-bar-success">[(#SOUSTITRE|textebrut)]</div>
+            </div>
+            
+            <div class="progress border-radius" data-appear-progress-animation="80%">
+              <div class="progress-bar progress-bar-info">[(#DESCRIPTIF|textebrut)]</div>
+            </div>
+            
+            <div class="progress border-radius" data-appear-progress-animation="80%">
+              <div class="progress-bar progress-bar-warning">[(#CHAPO|textebrut)]</div>
+            </div>
+            
+          </div><!-- .employee -->
+          
+      </div>
+    </BOUCLE_who>
+      <div class="clearfix"></div>
+  </div>

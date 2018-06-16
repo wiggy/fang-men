@@ -1,0 +1,50 @@
+<div class="full-width-box bottom-padding cm-padding-bottom-36">
+        <div class="fwb-bg fwb-fixed band-5"><div class="overlay"></div></div>
+        
+        <div class="container">
+          <div class="title-box title-white">
+            <h1 class="title no-top-padding">
+                <multi>
+                    [fr]Notre Équipe
+                    [en]Our Team
+                </multi>
+            </h1>
+          </div>
+          
+          <div class="row text-center">
+                
+                <BOUCLE_team(AUTEURS) {statut = 1comite}><div class="col-sm-3 col-md-3 rotation employee">
+                          <div class="default">
+                            <div class="image">
+                              <img class="replace-2x" src="[(#LOGO_AUTEUR||image_reduire{270,*}|image_recadre{270,270,center top}|extraire_attribut{src})]" alt="" title="" width="270" height="270">
+                            </div>
+                            <div class="description">
+                              <div class="vertical">
+                                [<h3 class="name">(#NOM)</h3>]
+                                [<div class="role">(#POSTE)</div>]	
+                              </div>
+                            </div>
+                          </div>
+                          <div class="employee-hover">
+                                [<h3 class="name">(#NOM)</h3>]
+                                [<div class="role">(#POSTE)</div>]	
+                            <div class="image">
+                              <img class="replace-2x" src="[(#LOGO_AUTEUR||image_reduire{270,*}|image_recadre{270,270,center top}|extraire_attribut{src})]" alt="" title="" width="270" height="270">
+                            </div>
+                            <div>
+                              [(#BIO)]
+                              [<div class="contact"><b>Email : </b>(#EMAIL)</div>]
+                              [<div class="contact"><b>Phone : </b>(#PHONE)</div>]
+                              [<div class="contact"><b>Website : </b><a href="(#URL_SITE)">[(#NOM_SITE|sinon{[(#URL_SITE|couper{40})]})]</a></div>]
+                            </div>
+                            <div class="social">
+                              [<a class="icon rounded" href="(#FACEBOOK)"><span class="icon-facebook"><i class="fa fa-facebook"></i></span></a>]
+                              [<a class="icon rounded" href="(#TWITTER)"><span class="icon-twitter"><i class="fa fa-twitter"></i></span></a>]
+                              [<a class="icon rounded" href="(#GOOGLE)"><span class="icon-google"><i class="fa fa-google"></i></span></a>]
+                              [<a class="icon rounded" href="(#LINKEDIN)"><span class="icon-linkedin"><i class="fa fa-linkedin"></i></span></a>]
+                            </div>
+                          </div><!-- .employee-hover -->
+                        </div><!-- .employee --></BOUCLE_team>
+          </div>
+        </div>
+      </div><!-- .full-width-box -->

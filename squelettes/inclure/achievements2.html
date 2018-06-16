@@ -1,0 +1,49 @@
+<div class="full-width-box bottom-padding cm-padding-bottom-36">
+	  <div class="fwb-bg fwb-paralax band-6" data-speed="2"><div class="overlay"></div></div>
+	  
+	  <div class="container">
+		<div class="portfolio">
+		  <div class="btn-group filter-buttons filter-list white">
+			<button type="button" class="dropdown-toggle" data-toggle="dropdown">
+				<multi>
+					[fr]Réalisations
+					[en]Achievements
+				</multi>
+				<span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu" role="menu">
+			  <li><a href="#" data-filter="*" class="active">
+						<multi>
+								[fr]Réalisations
+								[en]Achievements
+							</multi>
+				</a></li>
+			  <li><a href="#" data-filter=".it-solutions">IT Solutions</a></li>
+			  <li><a href="#" data-filter=".real-estate">Real Estate Solutions</a></li>
+			  <li><a href="#" data-filter=".training">Training / Certification</a></li>
+			</ul>
+			<div class="clearfix"></div>
+		  </div><!-- .filter-buttons -->
+		  
+		  <div class="clearfix"></div>
+		  
+		  <div class="row filter-elements">
+
+		<BOUCLE_work(ARTICLES) {id_rubrique IN 5,6} {lang} {par date} {inverse}>
+			<div class="work-element [(#DESCRIPTIF|textebrut)] col-xs-12 col-sm-3 col-md-3">
+			  <a href="[(#URL_ARTICLE|parametre_url{lang,#LANG})]" class="work">
+				<img class="replace-2x" src="[(#LOGO_ARTICLE||image_reduire{270,197}|extraire_attribut{src})]" width="270" height="197" alt="">
+				<span class="shadow"></span>
+				<div class="bg-hover"></div>
+				<div class="work-title">
+				  <h3 class="title">[(#TITRE|textebrut)]</h3>
+				  <div class="description">[(#SOUSTITRE|textebrut)]</div>
+				</div>
+			  </a>
+			</div><!-- .work-element -->
+		</BOUCLE_work>
+			
+		  </div>
+		</div>
+	  </div>
+	</div><!-- .full-width-box -->

@@ -1,0 +1,193 @@
+<div class="slider rs-slider load">
+    <div class="tp-banner-container">
+    <div class="rev_slider tp-banner" data-version="5.0.7">
+      <ul>
+  
+  <BOUCLE_slide1(RUBRIQUES) {lang} {id_rubrique IN 1,2}>
+  
+      <li data-delay="7000" data-transition="fade" data-slotamount="7" data-masterspeed="2000">
+        <div class="elements">
+        <div class="tp-caption"
+          data-x="16"
+          data-y="0"
+          data-start="1500"
+          data-transform_in="x:left;s:1000;e:Power4.easeOut"
+          data-transform_out="x:left;s:500;e:Power1.easeIn"
+          style="z-index: 2">
+          [(#LOGO_RUBRIQUE_NORMAL|image_reduire{600,*}|image_recadre{596,530})]
+        </div>
+        
+        
+        
+        <h2 class="tp-caption skewtotop title"
+          data-x="722"
+          data-y="101"
+          data-start="1700"
+          data-transform_in="y:top;s:1000;e:Power4.easeOut"
+          data-transform_out="y:top;s:500;e:Power1.easeIn">
+          <strong>[(#DESCRIPTIF|textebrut)]</strong>
+        </h2>
+        
+        <div class="tp-caption lfr skewtoright description"
+          data-x="707"
+          data-y="189"
+          data-start="1500"
+          data-transform_in="x:right;s:1000;e:Power4.easeOut"
+          data-transform_out="x:right;s:500;e:Power1.easeIn"
+          style="max-width: 480px">
+          <p>[(#TEXTE)]</p>
+        </div>
+  
+        <a href="[(#URL_RUBRIQUE|parametre_url{lang,#LANG})]"
+          class="btn btn-default cherry tp-caption"
+          data-x="722"
+          data-y="342"
+          data-start="1700"
+          data-transform_in="y:bottom;s:1000;e:Power4.easeOut"
+          data-transform_out="y:bottom;s:500;e:Power1.easeIn">
+          [(#BOUTON)]
+        </a>
+        </div>
+        
+        <img class="replace-2x" src="[(#LOGO_RUBRIQUE_SURVOL|extraire_attribut{src})]" alt="" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat">
+      </li>
+    </BOUCLE_slide1>
+  
+    <BOUCLE_slide2(RUBRIQUES) {lang} {id_rubrique IN 15,16}>
+      <li data-delay="7000" data-transition="fade" data-slotamount="7" data-masterspeed="2000">
+        <div class="elements">
+        <div class="tp-caption skewtobottom"
+          data-x="150"
+          data-y="100"
+          data-start="500"
+          data-transform_in="y:bottom;s:1000;e:Power4.easeOut"
+          data-transform_out="y:bottom;s:500;e:Power1.easeIn"
+          style="z-index: 3">
+          [(#LOGO_RUBRIQUE_NORMAL|image_reduire{250,*}|image_recadre{250,228})]
+        </div>
+      
+        
+        <h2 class="tp-caption sft skewtotop title"
+          data-x="590"
+          data-y="101"
+          data-start="500"
+          data-transform_in="y:top;s:1000;e:Power4.easeOut"
+          data-transform_out="y:top;s:400;e:Power1.easeIn">
+          [(#TITRE|textebrut)]
+        </h2>
+        
+        <div class="tp-caption lfr skewtoright description cm-description-2"
+          data-x="575"
+          data-y="189"
+          data-start="1000"
+          data-transform_in="x:right;s:1000;e:Power4.easeOut"
+          data-transform_out="x:right;s:400;e:Power1.easeIn"
+          style="max-width: 600px;">
+          [(#TEXTE)]
+        </div>
+  
+        <a href="[(#URL_RUBRIQUE|parametre_url{lang,#LANG})]"
+          class="btn tp-caption btn-warning"
+          data-x="590"
+          data-y="282"
+          data-start="1400"
+          data-transform_in="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;s:1200;e:Power3.easeOut"
+          data-transform_out="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;s:300;e:Power1.easeIn"
+          style="z-index: 5">
+          [(#BOUTON)]
+        </a>
+  
+        
+        </div>
+        
+        <img class="replace-2x" src="[(#LOGO_RUBRIQUE_SURVOL|extraire_attribut{src})]" alt="" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat">
+      </li>
+    </BOUCLE_slide2>
+  
+    <BOUCLE_slide3(RUBRIQUES) {lang} {id_rubrique IN 13,14}>
+      <li data-delay="10800" data-transition="fade" data-slotamount="7" data-masterspeed="2000" class="slid2">
+        <div class="elements">
+        <h2 class="tp-caption skewtotop title"
+          data-x="100"
+          data-hoffset="-100"
+          data-y="101"
+          data-start="1100"
+          data-transform_in="y:top;s:1000;e:Power4.easeOut"
+          data-transform_out="y:top;s:400;e:Power1.easeIn"
+          >
+          [(#TITRE|textebrut)]
+        </h2>
+        
+        <div class="tp-caption skewtoleft description"
+          data-x="100"
+          data-hoffset="-115"
+          data-y="189"
+          data-start="1000"
+          data-transform_in="x:left;s:1000;e:Power4.easeOut"
+          data-transform_out="x:left;s:400;e:Power1.easeIn"
+          style="max-width: 520px;">
+          [(#TEXTE)]
+        </div>
+  
+        <a href="[(#URL_RUBRIQUE|parametre_url{lang,#LANG})]"
+          class="btn btn-success tp-caption"
+          data-x="100"
+          data-hoffset="-100"
+          data-y="282"
+          data-start="1000"
+          data-transform_in="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;s:1200;e:Power3.easeOut"
+          data-transform_out="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;s:300;e:Power1.easeIn"
+          style="z-index: 5;">
+          [(#BOUTON)]
+        </a>
+        
+        
+        </div>
+        
+        <img class="replace-2x" src="[(#LOGO_RUBRIQUE|extraire_attribut{src})]" alt="" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat">
+      </li>
+    </BOUCLE_slide3>
+    
+    <BOUCLE_slide4(RUBRIQUES) {lang} {id_rubrique IN 11,12}>
+      <li data-delay="8000" data-transition="fade" data-slotamount="7" data-masterspeed="2000">
+        <div class="elements">
+        <h2 class="tp-caption title"
+          data-x="700"
+          data-y="122"
+          data-start="1500"
+          data-transform_in="x:right;s:1000;e:Power0.easeOut"
+          data-transform_out="x:right;s:1000;e:Power1.easeIn">
+          [(#TITRE|textebrut)]
+        </h2>
+        
+        <div class="tp-caption description"
+          data-x="695"
+          data-y="196"
+          data-start="1500"
+          data-transform_in="x:0;y:0;z:50;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0;s:500;e:Power0.easeOut"
+          data-transform_out="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;s:400;e:Power1.easeIn"
+          style="max-width: 500px;">
+          [(#TEXTE)]
+        </div>
+  
+        <a href="[(#URL_RUBRIQUE|parametre_url{lang,#LANG})]"
+          class="btn btn-primary tp-caption"
+          data-x="709"
+          data-y="338"
+          data-start="1500"
+          data-transform_in="y:bottom;s:1000;e:Power0.easeOut"
+          data-transform_out="y:bottom;s:300;e:Power1.easeIn"
+          >
+          [(#BOUTON)]
+        </a>
+  
+        </div>
+        
+        <img class="replace-2x" src="[(#LOGO_RUBRIQUE|extraire_attribut{src})]" alt="" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat">
+      </li>
+      </BOUCLE_slide4>
+      </ul>
+      <div class="tp-bannertimer"></div>
+    </div>
+    </div>
+  </div><!-- .rs-slider -->

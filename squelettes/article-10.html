@@ -1,0 +1,138 @@
+<BOUCLE_principale(ARTICLES) {id_article} {lang} {doublons}>
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>[(#NOM_SITE_SPIP|textebrut)] - [(#TITRE)]</title>
+  <meta name="keywords" content="GMT, Engineering, Solutions, IT, Real estate, training, certification, security, computing, computer, network, construction, energy, media, cloud, IoT, smartgrid, transport">
+  [<meta name="description" content="(#DESCRIPTIF_SITE_SPIP|couper{150}|attribut_html)" />]
+	<INCLURE{fond=inclure/head} />
+  
+  
+</head>
+<body class="fixed-header">
+<div class="page-box">
+<div class="page-box-content">
+
+    <INCLURE{fond=inclure/header_art, id_article} />
+
+    <!-- Ariane -->
+<div class="breadcrumb-box">
+    <div class="container">
+      <ul class="breadcrumb">
+        <li><a href="[(#URL_SITE_SPIP|parametre_url{lang,#LANG})]">
+            <multi>
+            [fr]Accueil
+            [en]Home
+            </multi>
+            </a></li>
+            <BOUCLE_ariane(HIERARCHIE){id_article}> <li> <a href="[(#URL_RUBRIQUE|parametre_url{lang,#LANG})]">[(#TITRE|couper{80})]</a></li></BOUCLE_ariane><li> <strong class="on">[(#TITRE|couper{80})]</strong></li>
+      </ul>	
+    </div>
+  </div>
+  <!-- Fin Ariane -->
+
+<div class="clearfix"></div>
+
+<section id="main">
+        <header class="page-header">
+                <div class="container">
+                  <h1 class="title">[(#TITRE)]</h1>
+                </div>
+        </header>
+
+  <article class="content">
+
+
+              <div class="container">
+                    <div class="row">
+                    <div class="bottom-padding col-sm-12 col-md-6">
+                        <div class="carousel-box load overflow" data-carousel-pagination="true" data-carousel-nav="false" data-carousel-one="true" data-autoplay-disable="true">
+
+                        <div class="row">
+                            <div class="carousel no-responsive">
+            
+                            <div class="post">
+
+                                <div class="entry-content">
+                                    <br><br>
+                                [(#TEXTE|image_reduire{500})]
+                                </div>
+                                
+                                <div class="entry-meta">
+                                <span class="autor-name">[(#LESAUTEURS|textebrut)]</span>,
+                                <span class="time">[(#DATE|affdate)]</span>
+                                <span class="separator">|</span>
+                    <span class="meta">Publié dans <BOUCLE_mots(MOTS) {id_article} {par titre}>
+                            #TITRE
+                            </BOUCLE_mots></span>
+                                </div>
+                            </div>
+                           
+                            </div>
+                        </div>
+                        
+                        <div class="clearfix"></div>
+                        
+                        <div class="pagination switches"></div>
+                        </div>
+                    </div>
+                    <B_latest>
+                            #ANCRE_PAGINATION
+                    <div class="col-sm-12 col-md-6">
+                            <div class="title-box">
+                            <h2 class="title">
+                                    Posts
+                            </h2>
+                            </div>
+                    
+                            <ul class="latest-posts">
+                    <BOUCLE_latest(ARTICLES) {lang} {id_rubrique IN 9,10} {par date} {inverse} {doublons}{pagination 5}>
+                            <li>
+                                <img class="image img-circle replace-2x" src="[(#LOGO_ARTICLE||image_reduire{*,84}|image_recadre{84,84,center top}|extraire_attribut{src})]" alt="" title="" width="84" height="84" data-appear-animation="rotateIn">
+                                <div class="meta">
+                                <span>[(#LESAUTEURS|textebrut)]</span>, 
+                                <span class="time">[(#DATE|affdate)]</span>
+                                <span class="separator">|</span>
+                    <span class="meta">Publié dans <BOUCLE_mots2(MOTS) {id_article} {par titre}>
+                            #TITRE
+                            </BOUCLE_mots2></span>
+                                </div>
+                                <div class="description">
+                                <a href="[(#URL_ARTICLE|parametre_url{lang,#LANG})]">
+                                    [<b>(#TITRE|textebrut)</b>]<br>
+                                    [(#INTRODUCTION{80})]
+                                </a>
+                                </div>
+                            </li>
+                    </BOUCLE_latest>
+                            </ul>
+                            [<p class="pagination">(#PAGINATION)</p>]
+                        </div>
+                    </B_latest>
+            
+                    </div>
+                </div>
+
+
+
+
+
+    <div class="clearfix"></div>
+
+  </article>
+</section><!-- #main -->
+
+</div><!-- .page-box-content -->
+</div><!-- .page-box -->
+
+<INCLURE{fond=inclure/footer} />
+<div class="clearfix"></div>
+
+<INCLURE{fond=inclure/ie-js} />
+<INCLURE{fond=inclure/std-js} />
+<INCLURE{fond=inclure/rev-js} />
+
+</body>
+</html>
+</BOUCLE_principale>

@@ -1,0 +1,95 @@
+<div class="container">
+        <div class="row">
+        <div class="bottom-padding col-sm-12 col-md-6">
+            <div class="carousel-box load overflow" data-carousel-pagination="true" data-carousel-nav="false" data-carousel-one="true" data-autoplay-disable="true">
+            <div class="title-box">
+                <a class="next" href="#">
+                <svg x="0" y="0" width="9px" height="16px" viewBox="0 0 9 16" enable-background="new 0 0 9 16" xml:space="preserve">
+                    <polygon fill-rule="evenodd" clip-rule="evenodd" fill="#fcfcfc" points="1,0.001 0,1.001 7,8 0,14.999 1,15.999 9,8 "></polygon>
+                </svg>
+                </a>
+                <a class="prev" href="#">
+                <svg x="0" y="0" width="9px" height="16px" viewBox="0 0 9 16" enable-background="new 0 0 9 16" xml:space="preserve">
+                    <polygon fill-rule="evenodd" clip-rule="evenodd" fill="#fcfcfc" points="8,15.999 9,14.999 2,8 9,1.001 8,0.001 0,8 "></polygon>
+                </svg>
+                </a>
+                <h2 class="title">
+                    Posts
+                </h2>
+            </div>
+            
+            <div class="clearfix"></div>
+            
+            <div class="row">
+                <div class="carousel no-responsive">
+
+            <BOUCLE_carousel(ARTICLES) {lang} {id_rubrique IN 9,10} {par date} {inverse} {0,2}>
+                <div class="post">
+                    <h2 class="entry-title"><a href="[(#URL_ARTICLE|parametre_url{lang,#LANG})]">[(#TITRE)]</a></h2>
+                    <div class="entry-content">
+                    [(#INTRODUCTION{850})]
+                    </div>
+                    
+                    <div class="entry-meta">
+                    <span class="autor-name">[(#LESAUTEURS|textebrut)]</span>,
+                    <span class="time">[(#DATE|affdate)]</span>
+                    <span class="separator">|</span>
+                    <span class="meta">Publié dans <BOUCLE_mots(MOTS) {id_article} {par titre}>
+                            #TITRE
+                            </BOUCLE_mots></span>
+                    </div>
+                </div>
+            </BOUCLE_carousel>
+               
+                </div>
+            </div>
+            
+            <div class="clearfix"></div>
+            
+            <div class="pagination switches"></div>
+            </div>
+        </div>
+        
+        <div class="col-sm-12 col-md-6">
+                <div class="title-box">
+        <BOUCLE_tous(RUBRIQUES) {lang} {id_rubrique IN 9,10}>
+                <a href="[(#URL_RUBRIQUE|parametre_url{lang,#LANG})]" class="btn btn-default">
+                        <multi>
+                                [fr]Tous les posts
+                                [en]All posts
+                        </multi>
+                    <span class="glyphicon glyphicon-arrow-right"></span></a>
+        </BOUCLE_tous>
+                <h2 class="title">
+                        <multi>
+                                [fr]Derniers posts
+                                [en]Latest posts
+                        </multi>
+                </h2>
+                </div>
+                <ul class="latest-posts">
+        <BOUCLE_latest(ARTICLES) {lang} {id_rubrique IN 9,10} {par date} {inverse} {2,3}>
+                <li>
+                    <img class="image img-circle replace-2x" src="[(#LOGO_ARTICLE||image_reduire{*,84}|image_recadre{84,84,center top}|extraire_attribut{src})]" alt="" title="" width="84" height="84" data-appear-animation="rotateIn">
+                    <div class="meta">
+                    <span>[(#LESAUTEURS|textebrut)]</span>, 
+                    <span class="time">[(#DATE|affdate)]</span>
+                    <span class="separator">|</span>
+                    <span class="meta">Publié dans <BOUCLE_mots2(MOTS) {id_article} {par titre}>
+                            #TITRE
+                            </BOUCLE_mots2></span>
+                    </div>
+                    <div class="description">
+                    <a href="[(#URL_ARTICLE|parametre_url{lang,#LANG})]">
+                        [<b>(#TITRE|textebrut)</b>]<br>
+                        [(#INTRODUCTION{80})]
+                    </a>
+                    </div>
+                </li>
+        </BOUCLE_latest>
+                </ul>
+            </div>
+
+
+        </div>
+    </div>

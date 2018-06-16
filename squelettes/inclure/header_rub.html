@@ -1,0 +1,112 @@
+<BOUCLE_secteur(RUBRIQUES){tout}{id_rubrique}{0,1}>
+<header class="header header-two">
+    <div class="header-wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-6 col-md-2 col-lg-3 logo-box">
+            <div class="logo">
+                  <a href="[(#URL_SITE_SPIP|parametre_url{lang,#LANG})]">
+                      <img src="[(#CHEMIN{img/logo.svg})]" class="logo-img" alt="">
+                  </a>
+            </div>
+          </div><!-- .logo-box -->
+          
+          <div class="col-xs-6 col-md-10 col-lg-9 right-box">
+            <div class="right-box-wrapper">
+              <div class="header-icons">
+                  
+                  <div class="btn-group language btn-select">
+                      <a class="btn dropdown-toggle btn-default" role="button" data-toggle="dropdown" href="#">
+                          <span class="hidden-xs">
+                            <multi>
+                            [fr]Langue
+                            [en]Language
+                            </multi>
+                          </span>
+                          <span class="visible-xs">
+                            Lang
+                          </span><!-- 
+                          -->:
+                          <multi>
+                            [fr]<img src="squelettes/img/fr.png" alt=""> Français
+                            [en]<img src="squelettes/img/en.png" alt=""> English
+                          </multi>
+                          <span class="caret"></span>
+                      </a>
+                      <ul class="dropdown-menu">
+
+                            <B_traductions>
+                                <BOUCLE_traductions(RUBRIQUES){traduction}{par lang}{inverse}>
+                                       <li><a href="[(#URL_RUBRIQUE|parametre_url{lang,#LANG})]" dir="#LANG_DIR"><img src="squelettes/img/#LANG.png" alt=""> [(#LANG|traduire_nom_langue)]</a></li>
+                                </BOUCLE_traductions>
+                            </B_traductions>
+
+                      </ul>
+                  </div>
+  
+              </div><!-- .header-icons -->
+              
+              <div class="primary">
+                <div class="navbar navbar-default" role="navigation">
+                  <button type="button" class="navbar-toggle btn-navbar collapsed" data-toggle="collapse" data-target=".primary .navbar-collapse">
+                    <span class="text">Menu</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+        
+                  <nav class="collapse collapsing navbar-collapse">
+                    <ul class="nav navbar-nav navbar-center">
+                      <li class="parent">
+                        <a href="[(#URL_SITE_SPIP|parametre_url{lang,#LANG})]">
+                        <multi>
+                        [fr]Accueil
+                        [en]Home
+                        </multi>
+                        </a>
+                      </li>
+                      <BOUCLE_nav(RUBRIQUES) {racine} {lang} {par num titre} {0,1}>
+		                  <li class="parent">
+                        <a href="[(#URL_RUBRIQUE|parametre_url{lang,#LANG})]">#TITRE</a>
+                      </li>
+		                  </BOUCLE_nav>
+                      <li class="parent item-success item-bg">
+                          <BOUCLE_nav2(RUBRIQUES) {lang} {id_rubrique IN 3,4}>
+
+                                <a href="[(#URL_RUBRIQUE|parametre_url{lang,#LANG})]">#TITRE</a>
+
+                          </BOUCLE_nav2>
+                        <ul class="sub">
+                          <li class="sub-wrapper">
+                            <div class="sub-list">
+                              <div class="box">
+                                <ul>
+                                    <BOUCLE_subnav(RUBRIQUES) {id_parent IN 3,4} {lang} {par num titre}>
+                                        <li><a href="[(#URL_RUBRIQUE|parametre_url{lang,#LANG})]"><i class="[(#DESCRIPTIF|textebrut)]"></i> [(#TITRE)]</a></li>
+                                    </BOUCLE_subnav>
+                                </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <BOUCLE_nav3(RUBRIQUES) {racine} {tout} {lang} {par num titre} {2,3}>
+		                  <li class="parent">
+                        <a href="[(#URL_RUBRIQUE|parametre_url{lang,#LANG})]">#TITRE</a>
+                      </li>
+		                  </BOUCLE_nav3>
+                      <li class="parent">
+                        <a href="[(#URL_PAGE{contact}|parametre_url{lang,#LANG})]">Contact</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div><!-- .primary -->
+            </div>
+          </div>
+      
+          
+          
+        </div><!--.row -->
+      </div>
+    </div><!-- .header-wrapper -->
+  </header><!-- .header -->
+  </BOUCLE_secteur>

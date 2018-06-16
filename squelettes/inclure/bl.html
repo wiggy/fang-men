@@ -1,0 +1,23 @@
+<div class="container">
+        <div class="row services">
+          <div class="col-sm-12 col-md-12">
+            <div class="title-box">
+              <h1 class="title">Business Lines</h1>
+            </div>
+          </div>
+<BOUCLE_bl(RUBRIQUES) {id_parent IN 3,4} {lang}>
+          <div class="big-services-box col-sm-4 col-md-4">
+            <div>
+              <div class="big-icon bg" data-appear-animation="wobble"><i class="[(#DESCRIPTIF|textebrut)]"></i></div>
+              <h4 class="title" data-appear-animation="bounceInLeft">[(#TITRE)]</h4>
+              <div class="text-small" data-appear-animation="bounceInLeft">
+                [(#TEXTE|textebrut)]
+                <div class="clearfix"></div><br>
+                <a href="[(#URL_RUBRIQUE|parametre_url{lang,#LANG})]"><button class="btn btn-default bgorange">[(#BOUTON)]</button></a>
+              </div>
+            </div>
+          </div><!-- .services-box-two -->
+</BOUCLE_bl>
+        </div>
+        <br><br>
+      </div>

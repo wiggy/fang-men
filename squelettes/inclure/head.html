@@ -1,0 +1,56 @@
+
+[(#REM) Complément de l'entête ]
+<meta http-equiv="Content-Type" content="text/html; charset=#CHARSET" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+[(#REM) Lien vers le flux RSS du site ]
+[<link rel="alternate" type="application/rss+xml" title="<:syndiquer_site:>" href="(#URL_PAGE{backend})" />]
+
+[(#REM) On appelle les feuilles de style ]   
+[<link rel="stylesheet" href="(#CHEMIN{css/bootstrap.css}|direction_css)" type="text/css" />]
+[<link rel="stylesheet" href="(#CHEMIN{css/font-awesome.min.css}|direction_css)" type="text/css" />]
+[<link rel="stylesheet" href="(#CHEMIN{css/jslider.css}|direction_css)" type="text/css" />]
+[<link rel="stylesheet" href="(#CHEMIN{css/revslider/settings.css}|direction_css)" type="text/css" />]
+[<link rel="stylesheet" href="(#CHEMIN{css/jquery.fancybox.css}|direction_css)" type="text/css" />]
+[<link rel="stylesheet" href="(#CHEMIN{css/animate.css}|direction_css)" type="text/css" />]
+[<link rel="stylesheet" href="(#CHEMIN{css/video-js.min.css}|direction_css)" type="text/css" />]
+[<link rel="stylesheet" href="(#CHEMIN{css/morris.css}|direction_css)" type="text/css" />]
+[<link rel="stylesheet" href="(#CHEMIN{css/royalslider/royalslider.css}|direction_css)" type="text/css" />]
+[<link rel="stylesheet" href="(#CHEMIN{css/royalslider/skins/minimal-white/rs-minimal-white.css}|direction_css)" type="text/css" />]
+[<link rel="stylesheet" href="(#CHEMIN{css/layerslider/css/layerslider.css}|direction_css)" type="text/css" />]
+[<link rel="stylesheet" href="(#CHEMIN{css/ladda.min.css}|direction_css)" type="text/css" />]
+[<link rel="stylesheet" href="(#CHEMIN{css/datepicker.css}|direction_css)" type="text/css" />]
+[<link rel="stylesheet" href="(#CHEMIN{css/jquery.scrollbar.css}|direction_css)" type="text/css" />]
+
+[(#REM) style CSS ]
+[<link rel="stylesheet" href="(#CHEMIN{css/style.css}|direction_css)" type="text/css" />]
+[<link rel="stylesheet" href="(#CHEMIN{css/customizer/pages.css}|direction_css)" type="text/css" />]
+[<link rel="stylesheet" href="(#CHEMIN{css/customizer/home-pages-customizer.css}|direction_css)" type="text/css" />]
+
+[(#REM) IE style ]
+[<link rel="stylesheet" href="(#CHEMIN{css/ie/ie.css}|direction_css)" type="text/css" />]
+
+[(#REM) fonts ]
+<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Arimo:400,700,400italic,700italic'>
+
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+			<link rel='stylesheet' href="css/ie/ie8.css">
+<![endif]-->
+
+
+[(#REM)
+	Balise permettant aux plugins d'inserer des appels javascript ;
+]
+#INSERT_HEAD
+
+[(#REM) Favicon ]
+[<link rel="icon" type="image/x-icon" href="(#CHEMIN{img/favicon.ico})" />
+[<link rel="shortcut icon" type="image/x-icon" href="(#CHEMIN{img/favicon.ico})" />]]
+
+[(#REM) meta robots ]
+[<meta name="robots" content="(#ENV{robots})" />]
+[(#REM) author ]
+[<meta name="author" content="FLATBJ" />]

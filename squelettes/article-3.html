@@ -1,0 +1,72 @@
+<BOUCLE_principale(ARTICLES) {id_article} {lang}>
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>[(#NOM_SITE_SPIP|textebrut)] - [(#TITRE)]</title>
+  <meta name="keywords" content="GMT, Engineering, Solutions, IT, Real estate, training, certification, security, computing, computer, network, construction, energy, media, cloud, IoT, smartgrid, transport">
+  [<meta name="description" content="(#DESCRIPTIF_SITE_SPIP|couper{150}|attribut_html)" />]
+	<INCLURE{fond=inclure/head} />
+  
+  
+</head>
+<body class="fixed-header">
+<div class="page-box">
+<div class="page-box-content">
+
+    <INCLURE{fond=inclure/header_art, id_article} />
+
+    <!-- Ariane -->
+<div class="breadcrumb-box">
+    <div class="container">
+      <ul class="breadcrumb">
+        <li><a href="[(#URL_SITE_SPIP|parametre_url{lang,#LANG})]">
+            <multi>
+            [fr]Accueil
+            [en]Home
+            </multi>
+            </a></li>
+            <BOUCLE_ariane(HIERARCHIE){id_article}> <li> <a href="[(#URL_RUBRIQUE|parametre_url{lang,#LANG})]">[(#TITRE|couper{80})]</a></li></BOUCLE_ariane><li> <strong class="on">[(#TITRE|couper{80})]</strong></li>
+      </ul>	
+    </div>
+  </div>
+  <!-- Fin Ariane -->
+
+<div class="clearfix"></div>
+
+<section id="main">
+        <header class="page-header">
+                <div class="container">
+                  <h1 class="title">[(#TITRE)]</h1>
+                </div>
+        </header>
+
+  <article class="content">
+
+        <div class="container">
+                [(#TEXTE)]
+                <br><br>
+                  <div class="clearfix"></div>
+              </div>
+
+
+              <INCLURE{fond=inclure/bl2, id_rubrique} />
+
+    <div class="clearfix"></div>
+
+  </article>
+</section><!-- #main -->
+
+</div><!-- .page-box-content -->
+</div><!-- .page-box -->
+
+<INCLURE{fond=inclure/footer} />
+<div class="clearfix"></div>
+
+<INCLURE{fond=inclure/ie-js} />
+<INCLURE{fond=inclure/std-js} />
+<INCLURE{fond=inclure/rev-js} />
+
+</body>
+</html>
+</BOUCLE_principale>

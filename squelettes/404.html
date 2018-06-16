@@ -1,0 +1,68 @@
+#HTTP_HEADER{HTTP/1.0  #ENV{code,'404 Not Found'}}
+#HTTP_HEADER{"Cache-Control: no-store, no-cache, must-revalidate"}
+#HTTP_HEADER{Pragma: no-cache}
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>[(#NOM_SITE_SPIP|textebrut)] - 404</title>
+  <meta name="keywords" content="GMT, Engineering, Solutions, IT, Real estate, training, certification, security, computing, computer, network, construction, energy, media, cloud, IoT, smartgrid, transport">
+  [<meta name="description" content="(#DESCRIPTIF_SITE_SPIP|couper{150}|attribut_html)" />]
+	<INCLURE{fond=inclure/head} />
+  
+  
+</head>
+<body class="fixed-header">
+<div class="page-box">
+<div class="page-box-content">
+
+    <INCLURE{fond=inclure/header_rub, id_rubrique} />
+
+<!-- Ariane -->
+<div class="breadcrumb-box">
+    <div class="container">
+      <ul class="breadcrumb">
+        <li><a href="[(#URL_SITE_SPIP|parametre_url{lang,#LANG})]">
+            <multi>
+            [fr]Accueil
+            [en]Home
+            </multi>
+            </a></li>
+            <li> <strong class="on">404</strong></li>
+      </ul>	
+    </div>
+  </div>
+  <!-- Fin Ariane -->
+
+<div class="clearfix"></div>
+
+<section id="main">
+        <header class="page-header">
+                <div class="container">
+                  <h1 class="title">404</h1>
+                </div>
+        </header>
+
+  <article class="content">
+
+    <center>
+        <img src="[(#CHEMIN{img/404.png})]">
+    </center>
+    
+    <div class="clearfix"></div>
+
+  </article>
+</section><!-- #main -->
+
+</div><!-- .page-box-content -->
+</div><!-- .page-box -->
+
+<INCLURE{fond=inclure/footer} />
+<div class="clearfix"></div>
+
+<INCLURE{fond=inclure/ie-js} />
+<INCLURE{fond=inclure/std-js} />
+<INCLURE{fond=inclure/rev-js} />
+
+</body>
+</html>

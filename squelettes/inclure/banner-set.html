@@ -1,0 +1,23 @@
+<div class="banner-set load" data-autoplay-disable="false">
+        <div class="container">
+          <div class="banners">
+            <BOUCLE_banner(ARTICLES) {id_secteur IN 3,4} {lang}>
+            <a href="#URL_ARTICLE" class="banner">
+                
+              <img class="replace-2x" src="[(#LOGO_ARTICLE||image_reduire{253,158}|extraire_attribut{src})]" width="253" height="158" alt="">
+              <h2 class="title">[(#TITRE|textebrut)]</h2>
+              <div class="description">[(#INTRODUCTION{100})]</div>
+            </a>
+            </BOUCLE_banner>
+            
+          </div><!-- .banners -->
+          <div class="clearfix"></div>
+        </div>
+        <div class="nav-box">
+          <div class="container">
+            <a class="prev" href="#"><span class="glyphicon glyphicon-arrow-left"></span></a>
+            <div class="pagination switches"></div>
+            <a class="next" href="#"><span class="glyphicon glyphicon-arrow-right"></span></a>	
+          </div>
+        </div>
+      </div><!-- .banner-set -->

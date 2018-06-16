@@ -1,0 +1,83 @@
+<BOUCLE_principale(AUTEURS){tout}{par id_auteur}{! email}{0,1}>
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>[(#NOM_SITE_SPIP|textebrut)] - Contact</title>
+  <meta name="keywords" content="GMT, Engineering, Solutions, IT, Real estate, training, certification, security, computing, computer, network, construction, energy, media, cloud, IoT, smartgrid, transport">
+  [<meta name="description" content="(#DESCRIPTIF_SITE_SPIP|couper{150}|attribut_html)" />]
+	<INCLURE{fond=inclure/head} />
+  
+  
+</head>
+<body class="fixed-header">
+<div class="page-box">
+<div class="page-box-content">
+
+	<INCLURE{fond=inclure/header} />
+
+<!-- Ariane -->
+<div class="breadcrumb-box">
+        <div class="container">
+          <ul class="breadcrumb">
+            <li><a href="[(#URL_SITE_SPIP|parametre_url{lang,#LANG})]">
+                <multi>
+                [fr]Accueil
+                [en]Home
+                </multi>
+                </a></li>
+                <li> <strong class="on"><:contact:></strong></li>
+          </ul>	
+        </div>
+      </div>
+      <!-- Fin Ariane -->
+
+<div class="clearfix"></div>
+
+<section id="main">
+        <header class="page-header">
+                <div class="container">
+                  <h1 class="title"><:contact:></h1>
+                </div>	
+        </header>
+  <article class="content">
+	
+	  
+        <div class="container">
+              
+                    <div class="row">
+                      <div class="col-sm-6 col-md-6 bottom-padding">
+                        <p class="lead">
+                            <img src="[(#CHEMIN{img/callcenter.jpg})]">
+                        </p>
+                      </div>
+                      
+                      <div class="col-sm-6 col-md-6 bottom-padding">
+                        
+                            #FORMULAIRE_ECRIRE_AUTEUR
+                        
+                      </div><!-- .employee -->
+                      
+                  </div>
+                  <div class="clearfix"></div>
+              </div>
+	
+
+
+
+  </article>
+</section><!-- #main -->
+
+</div><!-- .page-box-content -->
+</div><!-- .page-box -->
+
+<INCLURE{fond=inclure/footer} />
+<div class="clearfix"></div>
+
+<INCLURE{fond=inclure/ie-js} />
+<INCLURE{fond=inclure/std-js} />
+<INCLURE{fond=inclure/rev-js} />
+
+</body>
+</html>
+</BOUCLE_principale>
