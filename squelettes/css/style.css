@@ -3097,7 +3097,7 @@ a.edit i:before {
 }
 /* line 7, ../sass/_header.scss */
 .header .header-wrapper {
-  background: rgba(255, 255, 255, 0.97);
+  background: rgb(41, 1, 1);
   min-height: 100px;
   padding: 2px 0;
   /* Primary Menu */
@@ -3891,7 +3891,7 @@ a.edit i:before {
 }
 /* line 721, ../sass/_header.scss */
 .fixed-header .header .header-wrapper {
-  background: #fff;
+  background: -moz-linear-gradient(rgb(255, 255, 255), rgba(00, 91, 160, .5));
   -webkit-transition: background 0.2s linear;
           transition: background 0.2s linear;
 }
@@ -3902,7 +3902,7 @@ a.edit i:before {
 }
 /* line 729, ../sass/_header.scss */
 .fixed-header.background-opacity .header .header-wrapper {
-  background: rgba(255, 255, 255, 0.97);
+  background: -moz-linear-gradient(rgb(255, 255, 255), rgba(00, 91, 160, .5));
   -webkit-transition: background 0.2s linear;
           transition: background 0.2s linear;
 }
@@ -9437,7 +9437,7 @@ div.jp-audio ul.jp-controls {
 }
 /* line 27, ../sass/_footer.scss */
 #footer .footer-top {
-  background: #f2f2f2;
+  background: rgba(0, 91, 160, .1);
   font-size: 12px;
   line-height: 21px;
   padding: 50px 0 13px;
